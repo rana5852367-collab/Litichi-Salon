@@ -22,8 +22,11 @@ export default function Header() {
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 w-full bg-white backdrop-blur-md z-50 border-b"
-      style={{ borderColor: colors.gold }}
+      className="fixed top-0 w-full backdrop-blur-md z-50 border-b"
+      style={{
+        backgroundColor: "white", 
+        borderColor: colors.gold,
+      }}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         
@@ -31,7 +34,7 @@ export default function Header() {
         <div className="flex items-center">
           <span
             className="text-2xl font-bold tracking-widest"
-            style={{ color: colors.charcoal }}
+            style={{ color: colors.gold }}
           >
             Litchi Beauty Salon
           </span>
@@ -41,7 +44,7 @@ export default function Header() {
         <ul className="hidden md:flex justify-center gap-10 font-medium">
           <li className="relative group">
             <Link href="/" className="relative inline-block">
-              <span style={{ color: colors.charcoal }}>Home</span>
+              <span style={{ color: colors.gold }}>Home</span>
               <span
                 className="absolute left-0 -bottom-1 w-0 h-[2px] transition-all duration-300 group-hover:w-full"
                 style={{ backgroundColor: colors.gold }}
@@ -52,7 +55,7 @@ export default function Header() {
           {/* Services with Mega Menu */}
           <li className="relative group">
             <Link href="/" className="relative inline-block">
-              <span style={{ color: colors.charcoal }}>Services</span>
+              <span style={{ color: colors.gold }}>Services</span>
               <span
                 className="absolute left-0 -bottom-1 w-0 h-[2px] transition-all duration-300 group-hover:w-full"
                 style={{ backgroundColor: colors.gold }}
@@ -60,11 +63,15 @@ export default function Header() {
             </Link>
             <div
               className="absolute left-0 top-full mt-2 w-[600px] shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 rounded-xl"
-              style={{ backgroundColor: colors.beige1, borderColor: colors.brown2, borderStyle: "solid" }}
+              style={{
+                backgroundColor: "white", // transparent beige1
+                borderColor: colors.brown2,
+                borderStyle: "solid",
+              }}
             >
               <div className="grid grid-cols-3 gap-6 p-6">
                 <div>
-                  <h3 className="font-bold mb-2" style={{ color: colors.charcoal }}>Hair</h3>
+                  <h3 className="font-bold mb-2" style={{ color: colors.gold }}>Hair</h3>
                   <ul>
                     <li><Link href="/services/haircut" className="block py-1 hover:text-gold" style={{ color: colors.charcoal }}>Haircut</Link></li>
                     <li><Link href="/services/color" className="block py-1 hover:text-gold" style={{ color: colors.charcoal }}>Hair Color</Link></li>
@@ -72,7 +79,7 @@ export default function Header() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-bold mb-2" style={{ color: colors.charcoal }}>Skin</h3>
+                  <h3 className="font-bold mb-2" style={{ color: colors.gold }}>Skin</h3>
                   <ul>
                     <li><Link href="/services/facial" className="block py-1 hover:text-gold" style={{ color: colors.charcoal }}>Facial</Link></li>
                     <li><Link href="/services/massage" className="block py-1 hover:text-gold" style={{ color: colors.charcoal }}>Massage</Link></li>
@@ -80,7 +87,7 @@ export default function Header() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-bold mb-2" style={{ color: colors.charcoal }}>Nails</h3>
+                  <h3 className="font-bold mb-2" style={{ color: colors.gold }}>Nails</h3>
                   <ul>
                     <li><Link href="/services/manicure" className="block py-1 hover:text-gold" style={{ color: colors.charcoal }}>Manicure</Link></li>
                     <li><Link href="/services/pedicure" className="block py-1 hover:text-gold" style={{ color: colors.charcoal }}>Pedicure</Link></li>
@@ -93,7 +100,7 @@ export default function Header() {
 
           <li className="relative group">
             <Link href="/about" className="relative inline-block">
-              <span style={{ color: colors.charcoal }}>About</span>
+              <span style={{ color: colors.gold }}>About</span>
               <span
                 className="absolute left-0 -bottom-1 w-0 h-[2px] transition-all duration-300 group-hover:w-full"
                 style={{ backgroundColor: colors.gold }}
@@ -103,7 +110,7 @@ export default function Header() {
 
           <li className="relative group">
             <Link href="#offers" className="relative inline-block">
-              <span style={{ color: colors.charcoal }}>Offers</span>
+              <span style={{ color: colors.gold }}>Offers</span>
               <span
                 className="absolute left-0 -bottom-1 w-0 h-[2px] transition-all duration-300 group-hover:w-full"
                 style={{ backgroundColor: colors.gold }}
@@ -113,7 +120,7 @@ export default function Header() {
 
           <li className="relative group">
             <Link href="#academy" className="relative inline-block">
-              <span style={{ color: colors.charcoal }}>Academy</span>
+              <span style={{ color: colors.gold }}>Academy</span>
               <span
                 className="absolute left-0 -bottom-1 w-0 h-[2px] transition-all duration-300 group-hover:w-full"
                 style={{ backgroundColor: colors.gold }}
@@ -125,10 +132,10 @@ export default function Header() {
         {/* Contact Button */}
         <div className="flex items-center">
           <motion.button
-            whileHover={{ scale: 1.05, backgroundColor: colors.w, color: colors.charcoal }}
+            whileHover={{ scale: 1.05, backgroundColor: colors.gold, color: colors.charcoal }}
             whileTap={{ scale: 0.95 }}
             className="hidden md:block border px-6 py-2 rounded-full font-semibold transition duration-300 hover:shadow-lg"
-            style={{ borderColor: colors.charcoal, color: colors.charcoal }}
+            style={{ borderColor: colors.charcoal, color: colors.gold }}
           >
             Contact Us
           </motion.button>
@@ -136,7 +143,7 @@ export default function Header() {
           {/* Mobile Hamburger */}
           <button
             className="md:hidden ml-4 text-2xl font-bold"
-            style={{ color: colors.charcoal }}
+            style={{ color: colors.gold }}
             onClick={() => setMenuOpen(!menuOpen)}
           >
             ☰
@@ -146,8 +153,11 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden" style={{ backgroundColor: colors.beige1, borderTop: `1px solid ${colors.brown2}` }}>
-          <ul className="flex flex-col gap-4 p-6" style={{ color: colors.charcoal }}>
+        <div
+          className="md:hidden"
+          style={{ backgroundColor: "rgba(214,185,131,0.15)", borderTop: `1px solid ${colors.brown2}` }}
+        >
+          <ul className="flex flex-col gap-4 p-6" style={{ color: colors.gold }}>
             <li><Link href="/">Home</Link></li>
             <li><Link href="#services">Services</Link></li>
             <li><Link href="/about">About</Link></li>
@@ -157,7 +167,7 @@ export default function Header() {
               <Link
                 href="#contact"
                 className="block px-6 py-2 rounded-full text-center mt-2"
-                style={{ border: `1px solid ${colors.charcoal}`, color: colors.charcoal }}
+                style={{ border: `1px solid ${colors.gold}`, color: colors.gold }}
               >
                 Contact Us
               </Link>
