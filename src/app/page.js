@@ -20,7 +20,7 @@ export default function Home() {
     <About />
     <Services />
     <Academy />
-    <State />
+  
     
     <Footer />
     <Mega />

@@ -1,165 +1,331 @@
 "use client";
 
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail } from "lucide-react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Footer() {
-return ( <footer className="bg-[#0B0B0B] text-white border-t border-[#D4AF37]/20">
+  // Day Mode Color Palette
+  const colors = {
+    background: "#FFFBF5",      // Warm white
+    cardBg: "#FFFFFF",           // Pure white
+    gold: "#C9A14A",             // Elegant gold
+    darkGold: "#B8860B",         // Darker gold
+    lightGold: "#F4E4C1",        // Light gold
+    text: "#2A2A2A",             // Dark charcoal
+    textMuted: "#6B6B6B",        // Muted gray
+    lightBeige: "#FFF8F0",       // Light beige
+    border: "#E8D5B7",           // Soft border
+  };
 
-  {/* Top Section */}
+  const services = [
+    { name: "Hair Styling", link: "/services/hair" },
+    { name: "Facial", link: "/services/facial" },
+    { name: "Makeup", link: "/services/makeup" },
+    { name: "Manicure", link: "/services/manicure" },
+    { name: "Pedicure", link: "/services/pedicure" },
+  ];
 
-  <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+  const quickLinks = [
+    { name: "Home", link: "/" },
+    { name: "Services", link: "/services" },
+    { name: "Gallery", link: "/gallery" },
+    { name: "Booking", link: "/booking" },
+    { name: "Contact", link: "/contact" },
+  ];
 
+  const socialLinks = [
+    { icon: Facebook, link: "https://facebook.com", label: "Facebook" },
+    { icon: Instagram, link: "https://instagram.com", label: "Instagram" },
+    { icon: Twitter, link: "https://twitter.com", label: "Twitter" },
+  ];
 
-    {/* Logo & About */}
+  return (
+    <footer 
+      className="border-t-2"
+      style={{ 
+        backgroundColor: colors.lightBeige,
+        borderColor: colors.border,
+      }}
+    >
+      {/* Top Section */}
+      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
+        {/* Logo & About */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          {/* Logo */}
+          <div className="flex items-center gap-2 mb-4">
+            <div 
+              className="w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold"
+              style={{ 
+                backgroundColor: colors.gold,
+                color: colors.background,
+              }}
+            >
+              L
+            </div>
+            <h2 
+              className="text-2xl font-bold"
+              style={{ color: colors.gold }}
+            >
+              Litchi Salon
+            </h2>
+          </div>
 
-    <div>
+          {/* Description */}
+          <p 
+            className="mb-6 leading-relaxed"
+            style={{ color: colors.textMuted }}
+          >
+            Experience luxury beauty services with professional care. 
+            We make you look and feel your best.
+          </p>
 
-      <h2 className="text-2xl font-bold text-[#D4AF37] mb-4">
+          {/* Social Icons */}
+          <div className="flex gap-3">
+            {socialLinks.map((social, index) => (
+              <motion.a
+                key={index}
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 border-2"
+                style={{ 
+                  backgroundColor: colors.cardBg,
+                  borderColor: colors.gold,
+                  color: colors.gold,
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = colors.gold;
+                  e.currentTarget.style.color = colors.background;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = colors.cardBg;
+                  e.currentTarget.style.color = colors.gold;
+                }}
+                aria-label={social.label}
+              >
+                <social.icon size={18} />
+              </motion.a>
+            ))}
+          </div>
+        </motion.div>
 
-        Litichi Salon
+        {/* Services */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+        >
+          <h3 
+            className="text-xl font-bold mb-6 flex items-center gap-2"
+            style={{ color: colors.text }}
+          >
+            <span 
+              className="w-1 h-6 rounded-full"
+              style={{ backgroundColor: colors.gold }}
+            />
+            Our Services
+          </h3>
 
-      </h2>
+          <ul className="space-y-3">
+            {services.map((service, index) => (
+              <li key={index}>
+                <Link
+                  href={service.link}
+                  className="flex items-center gap-2 transition-all duration-300 group"
+                  style={{ color: colors.textMuted }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = colors.gold;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = colors.textMuted;
+                  }}
+                >
+                  <span 
+                    className="w-1.5 h-1.5 rounded-full transition-all duration-300 group-hover:w-3"
+                    style={{ backgroundColor: colors.gold }}
+                  />
+                  {service.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
 
-      <p className="text-gray-400">
+        {/* Quick Links */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <h3 
+            className="text-xl font-bold mb-6 flex items-center gap-2"
+            style={{ color: colors.text }}
+          >
+            <span 
+              className="w-1 h-6 rounded-full"
+              style={{ backgroundColor: colors.gold }}
+            />
+            Quick Links
+          </h3>
 
-        Experience luxury beauty services with professional care. 
-        We make you look and feel your best.
+          <ul className="space-y-3">
+            {quickLinks.map((link, index) => (
+              <li key={index}>
+                <Link
+                  href={link.link}
+                  className="flex items-center gap-2 transition-all duration-300 group"
+                  style={{ color: colors.textMuted }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = colors.gold;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = colors.textMuted;
+                  }}
+                >
+                  <span 
+                    className="w-1.5 h-1.5 rounded-full transition-all duration-300 group-hover:w-3"
+                    style={{ backgroundColor: colors.gold }}
+                  />
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
 
-      </p>
+        {/* Contact Info */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <h3 
+            className="text-xl font-bold mb-6 flex items-center gap-2"
+            style={{ color: colors.text }}
+          >
+            <span 
+              className="w-1 h-6 rounded-full"
+              style={{ backgroundColor: colors.gold }}
+            />
+            Contact Us
+          </h3>
 
+          <div className="space-y-4">
+            {/* Address */}
+            <motion.div
+              whileHover={{ x: 5 }}
+              className="flex items-start gap-3 p-3 rounded-lg transition-all duration-300"
+              style={{ backgroundColor: colors.cardBg }}
+            >
+              <div 
+                className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
+                style={{ backgroundColor: colors.lightGold }}
+              >
+                <MapPin size={16} style={{ color: colors.gold }} />
+              </div>
+              <p style={{ color: colors.textMuted }}>
+                Bahawalnagar, Pakistan
+              </p>
+            </motion.div>
 
-      {/* Social Icons */}
+            {/* Phone */}
+            <motion.a
+              href="tel:+923001234567"
+              whileHover={{ x: 5 }}
+              className="flex items-center gap-3 p-3 rounded-lg transition-all duration-300"
+              style={{ backgroundColor: colors.cardBg }}
+            >
+              <div 
+                className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
+                style={{ backgroundColor: colors.lightGold }}
+              >
+                <Phone size={16} style={{ color: colors.gold }} />
+              </div>
+              <p style={{ color: colors.textMuted }}>
+                +92 300 1234567
+              </p>
+            </motion.a>
 
-
-      <div className="flex gap-4 mt-6">
-
-        <Facebook className="cursor-pointer hover:text-[#D4AF37] transition duration-300" />
-
-        <Instagram className="cursor-pointer hover:text-[#D4AF37] transition duration-300" />
-
-        <Twitter className="cursor-pointer hover:text-[#D4AF37] transition duration-300" />
-
+            {/* Email */}
+            <motion.a
+              href="mailto:info@litchi.com"
+              whileHover={{ x: 5 }}
+              className="flex items-center gap-3 p-3 rounded-lg transition-all duration-300"
+              style={{ backgroundColor: colors.cardBg }}
+            >
+              <div 
+                className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
+                style={{ backgroundColor: colors.lightGold }}
+              >
+                <Mail size={16} style={{ color: colors.gold }} />
+              </div>
+              <p style={{ color: colors.textMuted }}>
+                info@litchi.com
+              </p>
+            </motion.a>
+          </div>
+        </motion.div>
       </div>
 
-    </div>
+      {/* Bottom Section */}
+      <div 
+        className="border-t-2 py-6"
+        style={{ borderColor: colors.border }}
+      >
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            {/* Copyright */}
+            <p 
+              className="text-sm"
+              style={{ color: colors.textMuted }}
+            >
+              © 2026 Litchi Beauty Salon. All Rights Reserved.
+            </p>
 
-
-
-    {/* Services */}
-
-
-    <div>
-
-      <h3 className="text-xl font-semibold text-[#D4AF37] mb-4">
-
-        Our Services
-
-      </h3>
-
-      <ul className="space-y-2 text-gray-400">
-
-        <li className="hover:text-[#D4AF37] cursor-pointer transition">Hair Styling</li>
-
-        <li className="hover:text-[#D4AF37] cursor-pointer transition">Facial</li>
-
-        <li className="hover:text-[#D4AF37] cursor-pointer transition">Makeup</li>
-
-        <li className="hover:text-[#D4AF37] cursor-pointer transition">Manicure</li>
-
-        <li className="hover:text-[#D4AF37] cursor-pointer transition">Pedicure</li>
-
-      </ul>
-
-    </div>
-
-
-
-    {/* Quick Links */}
-
-
-    <div>
-
-      <h3 className="text-xl font-semibold text-[#D4AF37] mb-4">
-
-        Quick Links
-
-      </h3>
-
-      <ul className="space-y-2 text-gray-400">
-
-        <li className="hover:text-[#D4AF37] cursor-pointer transition">Home</li>
-
-        <li className="hover:text-[#D4AF37] cursor-pointer transition">Services</li>
-
-        <li className="hover:text-[#D4AF37] cursor-pointer transition">Gallery</li>
-
-        <li className="hover:text-[#D4AF37] cursor-pointer transition">Booking</li>
-
-        <li className="hover:text-[#D4AF37] cursor-pointer transition">Contact</li>
-
-      </ul>
-
-    </div>
-
-
-
-    {/* Contact Info */}
-
-
-    <div>
-
-      <h3 className="text-xl font-semibold text-[#D4AF37] mb-4">
-
-        Contact Us
-
-      </h3>
-
-
-      <div className="space-y-3 text-gray-400">
-
-
-        <p className="flex items-center gap-2">
-
-          <MapPin size={18} /> Bahawalnagar, Pakistan
-
-        </p>
-
-
-        <p className="flex items-center gap-2">
-
-          <Phone size={18} /> +92 300 1234567
-
-        </p>
-
-
-        <p className="flex items-center gap-2">
-
-          <Mail size={18} /> info@litichi.com
-
-        </p>
-
-
+            {/* Additional Links */}
+            <div className="flex items-center gap-6 text-sm">
+              <Link
+                href="/privacy"
+                className="transition-colors duration-300"
+                style={{ color: colors.textMuted }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = colors.gold;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = colors.textMuted;
+                }}
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms"
+                className="transition-colors duration-300"
+                style={{ color: colors.textMuted }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = colors.gold;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = colors.textMuted;
+                }}
+              >
+                Terms of Service
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
-
-    </div>
-
-
-  </div>
-
-
-
-  {/* Bottom Section */}
-
-
-  <div className="border-t border-[#D4AF37]/20 text-center py-6 text-gray-400">
-
-    © 2026 Litichi Beauty Salon. All Rights Reserved.
-
-  </div>
-
-
-</footer>
-
-);
+    </footer>
+  );
 }
