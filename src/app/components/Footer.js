@@ -291,7 +291,7 @@ export default function Footer() {
               className="text-sm"
               style={{ color: colors.textMuted }}
             >
-              © 2026 Litchi Beauty Salon. All Rights Reserved.
+              © 2026 Litchi Beauty Salon. All Rights Reserved. Designed by SoftCentric.
             </p>
 
             {/* Additional Links */}

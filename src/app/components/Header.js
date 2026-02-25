@@ -76,7 +76,7 @@ export default function Header() {
             <Link href="/" className="relative inline-block">
               <span style={{ color: colors.gold }}>Home</span>
               <span
-                className="absolute left-0 -bottom-1 w-0 h-[2px] transition-all duration-300 group-hover:w-full"
+                className="absolute left-0 -bottom-1  transition-all duration-300 group-hover:w-full"
                 style={{ backgroundColor: colors.gold }}
               ></span>
             </Link>
@@ -87,12 +87,12 @@ export default function Header() {
             <Link href="/" className="relative inline-block">
               <span style={{ color: colors.gold }}>Services</span>
               <span
-                className="absolute left-0 -bottom-1 w-0 h-[2px] transition-all duration-300 group-hover:w-full"
+                className="absolute left-0 -bottom-1 w-0  transition-all duration-300 group-hover:w-full"
                 style={{ backgroundColor: colors.gold }}
               ></span>
             </Link>
             <div
-              className="absolute left-0 top-full mt-2 w-[600px] shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 rounded-xl"
+              className="absolute left-0 top-full mt-2 w-[500px] shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 rounded-xl"
               style={{
                 backgroundColor: "white",
                 borderColor: colors.brown2,
@@ -132,7 +132,7 @@ export default function Header() {
             <Link href="/about" className="relative inline-block">
               <span style={{ color: colors.gold }}>About</span>
               <span
-                className="absolute left-0 -bottom-1 w-0 h-[2px] transition-all duration-300 group-hover:w-full"
+                className="absolute left-0 -bottom-1 w-0  transition-all duration-300 group-hover:w-full"
                 style={{ backgroundColor: colors.gold }}
               ></span>
             </Link>
@@ -142,7 +142,7 @@ export default function Header() {
             <Link href="#offers" className="relative inline-block">
               <span style={{ color: colors.gold }}>Offers</span>
               <span
-                className="absolute left-0 -bottom-1 w-0 h-[2px] transition-all duration-300 group-hover:w-full"
+                className="absolute left-0 -bottom-1 w-0  transition-all duration-300 group-hover:w-full"
                 style={{ backgroundColor: colors.gold }}
               ></span>
             </Link>
@@ -152,7 +152,7 @@ export default function Header() {
             <Link href="#academy" className="relative inline-block">
               <span style={{ color: colors.gold }}>Academy</span>
               <span
-                className="absolute left-0 -bottom-1 w-0 h-[2px] transition-all duration-300 group-hover:w-full"
+                className="absolute left-0 -bottom-1 w-0  transition-all duration-300 group-hover:w-full"
                 style={{ backgroundColor: colors.gold }}
               ></span>
             </Link>
