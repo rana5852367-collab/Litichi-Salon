@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Skin = () => {
   return (
-    <section className="py-16 bg-[#0B0B0C] text-white">
+    <section className="py-16 bg-white text-white">
       <div className="max-w-4xl mx-auto px-4 text-center">
 
         {/* Title */}
@@ -15,7 +15,7 @@ const Skin = () => {
 
 
         {/* Paragraph */}
-        <p className="text-[#F5E6C8] mb-10 text-lg md:text-xl leading-relaxed">
+        <p className="text-black mb-10 text-lg md:text-xl leading-relaxed">
           Pamper yourself with our premium services designed to bring out your
           natural beauty. Our experts provide professional care in a relaxing
           and elegant environment.

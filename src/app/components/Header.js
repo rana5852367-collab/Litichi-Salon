@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,14 +32,43 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         
         {/* Logo */}
-        <div className="flex items-center">
-          <span
-            className="text-2xl font-bold tracking-widest"
-            style={{ color: colors.gold }}
+        <Link href="/" className="flex items-center gap-3 group">
+          {/* Logo Image Container */}
+          <motion.div
+            whileHover={{ scale: 1.05, rotate: 5 }}
+            transition={{ duration: 0.3 }}
+            className="relative"
           >
-            Litchi Beauty Salon
-          </span>
-        </div>
+            {/* Replace '/logo.png' with your actual logo path */}
+            <Image
+              src="/logo.svg" // Put your logo in public/logo.png
+              alt=""
+              width={60}
+              height={60}
+              className="object-contain"
+              priority
+              onError={(e) => {
+                // Fallback if image fails to load
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'flex';
+              }}
+            />
+            
+            {/* Fallback Icon (shown if image fails) */}
+            <div 
+              className="hidden w-12 h-12 rounded-full items-center justify-center font-bold text-xl"
+              style={{ 
+                backgroundColor: colors.gold,
+                color: 'white'
+              }}
+            >
+              L
+            </div>
+          </motion.div>
+
+          {/* Logo Text */}
+        
+        </Link>
 
         {/* Center Menu */}
         <ul className="hidden md:flex justify-center gap-10 font-medium">
@@ -64,7 +94,7 @@ export default function Header() {
             <div
               className="absolute left-0 top-full mt-2 w-[600px] shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 rounded-xl"
               style={{
-                backgroundColor: "white", // transparent beige1
+                backgroundColor: "white",
                 borderColor: colors.brown2,
                 borderStyle: "solid",
               }}

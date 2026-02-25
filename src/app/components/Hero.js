@@ -24,7 +24,7 @@ export default function Hero() {
           initial={{ opacity: 0, x: -80 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#2A2A2A] leading-tight"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#ca9945] leading-tight"
         >
           Litchi
           <span className="block text-[#C9A14A] mt-2">
