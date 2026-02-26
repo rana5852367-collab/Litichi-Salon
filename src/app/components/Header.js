@@ -84,7 +84,7 @@ export default function Header() {
 
           {/* Services with Mega Menu */}
           <li className="relative group">
-            <Link href="/" className="relative inline-block">
+            <Link href="/services" className="relative inline-block">
               <span style={{ color: colors.gold }}>Services</span>
               <span
                 className="absolute left-0 -bottom-1 w-0  transition-all duration-300 group-hover:w-full"
