@@ -54,7 +54,8 @@ export default function Hero() {
           </button>
 
           <button className="border border-[#C9A14A] text-[#C9A14A] px-8 py-3 rounded-full font-semibold hover:bg-[#C9A14A] hover:text-[#2A2A2A] transition duration-300">
-            View Services
+            <a href="/services" className="block w-full h-full">
+            view services </a>
           </button>
         </motion.div>
       </div>
