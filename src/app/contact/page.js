@@ -103,13 +103,7 @@ export default function ContactPage() {
       color: "#FF0000",
       followers: "15.3K",
     },
-    {
-      icon: Linkedin,
-      name: "LinkedIn",
-      link: "https://linkedin.com",
-      color: "#0A66C2",
-      followers: "5.1K",
-    },
+   
   ];
 
   const services = [

@@ -23,10 +23,9 @@ export default function Blog() {
       id: 1,
       title: "Bridal Makeup Transformation",
       excerpt: "See this amazing bridal transformation.",
-      beforeImage: "/before1.jpg",
-      afterImage: "/after1.jpg",
+      beforeImage: "/mack.jpg",
+      afterImage: "/img1.jpg",
       category: "Makeup",
-      author: "Sarah Ahmed",
       date: "March 15, 2024",
       readTime: "5 min",
     },
@@ -35,8 +34,10 @@ export default function Blog() {
       id: 2,
       title: "Hair Color Transformation",
       excerpt: "Professional hair coloring results.",
-      beforeImage: "/before2.jpg",
-      afterImage: "/after2.jpg",
+      beforeImage: "/hair1.jpg",
+      afterImage: "/hair2.jpg",
+      category: "Hair",
+  
       date: "March 12, 2024",
       readTime: "8 min",
     },
@@ -45,8 +46,10 @@ export default function Blog() {
       id: 3,
       title: "Skin Treatment Results",
       excerpt: "Clear glowing skin transformation.",
-      beforeImage: "/before3.jpg",
-      afterImage: "/after3.jpg",
+      beforeImage: "/skin1.jpg",
+      afterImage: "/skin2.jpg",
+      category: "Skin",
+
       date: "March 10, 2024",
       readTime: "6 min",
     },
@@ -55,9 +58,10 @@ export default function Blog() {
       id: 4,
       title: "Luxury Facial Transformation",
       excerpt: "Premium facial treatment results.",
-      beforeImage: "/before4.jpg",
-      afterImage: "/after4.jpg",
+      beforeImage: "/treatment.jpg",
+      afterImage: "/treatment.jpg",
       category: "Facial",
+      author: "Sara Malik",
       date: "March 8, 2024",
       readTime: "7 min",
     },
@@ -74,7 +78,6 @@ export default function Blog() {
 
       <div className="max-w-7xl mx-auto">
 
-
         {/* Header */}
 
         <div className="text-center mb-14">
@@ -89,7 +92,6 @@ export default function Blog() {
             Our Blog
           </span>
 
-
           <h2
             className="text-4xl md:text-5xl font-bold mt-4"
             style={{ color: colors.text }}
@@ -99,7 +101,6 @@ export default function Blog() {
           </h2>
 
         </div>
-
 
 
         {/* Grid Layout */}
@@ -132,46 +133,53 @@ export default function Blog() {
             >
 
 
+              {/* BEFORE AFTER SPLIT IMAGES */}
 
-              {/* Before After Image */}
-
-              <div className="relative h-56 xl:h-60 overflow-hidden">
+              <div className="relative grid grid-cols-2 h-56 xl:h-60 overflow-hidden">
 
 
                 {/* Before */}
 
-                <Image
-                  src={post.beforeImage}
-                  alt="before"
-                  width={400}
-                  height={300}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:opacity-0 group-hover:scale-110 transition duration-700"
-                />
+                <div className="relative group overflow-hidden">
 
+                  <Image
+                    src={post.beforeImage}
+                    alt="before"
+                    width={300}
+                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                  />
 
-                {/* After */}
+                  <div className="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded text-xs font-semibold">
 
-                <Image
-                  src={post.afterImage}
-                  alt="after"
-                  width={400}
-                  height={300}
-                  className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-110 transition duration-700"
-                />
+                    Before
 
-
-                {/* Labels */}
-
-                <div className="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded text-xs">
-
-                  Before
+                  </div>
 
                 </div>
 
 
-                <div className="absolute bottom-4 right-4 bg-[#C9A14A] text-white px-3 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition">
 
-                  After
+                {/* After */}
+
+                <div className="relative group overflow-hidden">
+
+                  <Image
+                    src={post.afterImage}
+                    alt="after"
+                    width={300}
+                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                  />
+
+                  <div
+                    className="absolute bottom-3 right-3 text-white px-3 py-1 rounded text-xs font-semibold"
+                    style={{ backgroundColor: colors.gold }}
+                  >
+
+                    After
+
+                  </div>
 
                 </div>
 
@@ -181,7 +189,7 @@ export default function Blog() {
 
                 <div
 
-                  className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold"
+                  className="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-semibold z-10"
 
                   style={{
                     backgroundColor: colors.gold,
@@ -206,6 +214,7 @@ export default function Blog() {
 
                 <div className="flex gap-3 text-xs mb-2" style={{ color: colors.textMuted }}>
 
+
                   <div className="flex items-center gap-1">
 
                     <Calendar size={13} />
@@ -229,11 +238,8 @@ export default function Blog() {
 
 
                 <h3
-
                   className="font-bold text-lg mb-2"
-
                   style={{ color: colors.text }}
-
                 >
 
                   {post.title}
@@ -243,11 +249,8 @@ export default function Blog() {
 
 
                 <p
-
                   className="text-sm mb-3"
-
                   style={{ color: colors.textMuted }}
-
                 >
 
                   {post.excerpt}
@@ -270,11 +273,8 @@ export default function Blog() {
 
 
                   <button
-
                     className="flex items-center gap-1 text-sm font-semibold"
-
                     style={{ color: colors.gold }}
-
                   >
 
                     View
@@ -306,4 +306,4 @@ export default function Blog() {
 
   );
 
-}
+}   
