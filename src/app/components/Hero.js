@@ -9,11 +9,11 @@ export default function Hero() {
 
       {/* Optional Background Image */}
       <Image
-        src="/salon.jpg" // Keep for subtle background, optional
+        src="/background.jpg" // Put your background image in public/background.jpg
         alt=""
         fill
         priority
-        className="object-cover opacity-80" // faded image for subtle texture
+        className="object-cover opacity-80"
       />
 
       {/* Content */}
