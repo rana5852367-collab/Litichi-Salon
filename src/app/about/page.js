@@ -456,7 +456,7 @@ export default function AboutPage() {
               backgroundColor: colors.cardBg,
               borderColor: colors.gold,
             }}
-          >
+          >   
             <h2 
               className="text-4xl md:text-5xl font-bold mb-6"
               style={{ color: colors.text }}

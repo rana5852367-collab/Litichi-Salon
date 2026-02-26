@@ -92,7 +92,7 @@ export default function Header() {
               ></span>
             </Link>
             <div
-              className="absolute left-0 top-full mt-2 w-[500px] shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 rounded-xl"
+              className="absolute left-0 top-full mt-2 w-200 shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 rounded-xl"
               style={{
                 backgroundColor: "white",
                 borderColor: colors.brown2,
@@ -139,7 +139,7 @@ export default function Header() {
           </li>
 
           <li className="relative group">
-            <Link href="#offers" className="relative inline-block">
+            <Link href="/offer" className="relative inline-block">
               <span style={{ color: colors.gold }}>Offers</span>
               <span
                 className="absolute left-0 -bottom-1 w-0  transition-all duration-300 group-hover:w-full"
