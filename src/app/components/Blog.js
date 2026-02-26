@@ -26,6 +26,8 @@ export default function Blog() {
       beforeImage: "/before1.jpg",
       afterImage: "/after1.jpg",
       category: "Makeup",
+      author: "Sarah Ahmed",
+      date: "March 15, 2024",
       readTime: "5 min",
     },
 

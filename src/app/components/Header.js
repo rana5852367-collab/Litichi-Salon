@@ -65,9 +65,6 @@ export default function Header() {
               L
             </div>
           </motion.div>
-
-          {/* Logo Text */}
-        
         </Link>
 
         {/* Center Menu */}
