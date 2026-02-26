@@ -164,7 +164,7 @@ export default function Header() {
             className="hidden md:block border px-6 py-2 rounded-full font-semibold transition duration-300 hover:shadow-lg"
             style={{ borderColor: colors.charcoal, color: colors.gold }}
           >
-            Contact Us
+            <a href="/contact" className="block w-full h-full">Contact us</a>
           </motion.button>
 
           {/* Mobile Hamburger */}
