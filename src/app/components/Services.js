@@ -213,7 +213,7 @@ export default function ServicesShowcase() {
                     e.currentTarget.style.backgroundColor = colors.gold;
                   }}
                 >
-                  <span className="relative z-10">Book Appointment</span>
+                  <span className="relative z-10"> <a href="bookopointment" className="text-white no-underline">Book Appointment</a></span>
                   
                   {/* Shine effect */}
                   <motion.div
