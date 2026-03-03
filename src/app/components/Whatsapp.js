@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function Whatsapp() {
 
-  const phoneNumber = "923252721375"; // your WhatsApp number with country code
+  const phoneNumber = "9231234567764"; // your WhatsApp number with country code
 
   const message = "Hello, I want to book an appointment.";
 

@@ -47,7 +47,7 @@ export default function offer() {
       originalPrice: "Rs. 45,000",
       discountedPrice: "Rs. 32,000",
       discount: "29% OFF",
-      image: "/offer-bridal.jpg",
+      image: "/bridal1.jpg",
       features: [
         "HD Bridal Makeup",
         "Professional Hair Styling",
@@ -69,7 +69,7 @@ export default function offer() {
       originalPrice: "Rs. 20,000",
       discountedPrice: "Rs. 14,999",
       discount: "25% OFF",
-      image: "/offer-monthly.jpg",
+      image: "/color2.jpg",
       features: [
         "3 Facials per Month",
         "2 Manicures",
@@ -91,7 +91,7 @@ export default function offer() {
       originalPrice: "Rs. 15,000",
       discountedPrice: "Rs. 10,500",
       discount: "30% OFF",
-      image: "/offer-party.jpg",
+      image: "/facial.jpg",
       features: [
         "Party Makeup",
         "Hair Styling",
@@ -112,7 +112,7 @@ export default function offer() {
       originalPrice: "Regular Price",
       discountedPrice: "20% OFF",
       discount: "STUDENT DISCOUNT",
-      image: "/offer-student.jpg",
+      image: "/hair2.jpg",
       features: [
         "Valid on All Services",
         "Additional Offers on Packages",
@@ -133,7 +133,7 @@ export default function offer() {
       originalPrice: "Rs. 8,000",
       discountedPrice: "Rs. 5,500",
       discount: "31% OFF",
-      image: "/offer-haircolor.jpg",
+      image: "/mack.jpg",
       features: [
         "Premium Quality Color",
         "Free Hair Treatment",
@@ -154,7 +154,7 @@ export default function offer() {
       originalPrice: "Free Services",
       discountedPrice: "Up to Rs. 5,000",
       discount: "REWARDS",
-      image: "/offer-refer.jpg",
+      image: "/mackup2.jpg",
       features: [
         "Rs. 1,000 per Referral",
         "No Limit on Referrals",
