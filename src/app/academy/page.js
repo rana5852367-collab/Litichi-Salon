@@ -19,28 +19,28 @@ export default function Academy() {
   const courses = [
     {
       title: "Hair Styling",
-      image: "/academy1.jpg",
+      image: "/hair2.jpg",
       duration: "3 Months",
       students: "120+",
       description: "Learn modern hair cutting and styling.",
     },
     {
       title: "Makeup Course",
-      image: "/academy2.jpg",
+      image: "/mackup2.jpg",
       duration: "2 Months",
       students: "90+",
       description: "Become professional makeup artist.",
     },
     {
       title: "Skin Care",
-      image: "/academy3.jpg",
+      image: "/skin2.jpg",
       duration: "2 Months",
       students: "70+",
       description: "Professional facial and skin training.",
     },
     {
       title: "Nail Course",
-      image: "/academy4.jpg",
+      image: "/nail.jpg",
       duration: "1 Month",
       students: "60+",
       description: "Learn nail art and extensions.",

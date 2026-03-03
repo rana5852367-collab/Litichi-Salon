@@ -7,9 +7,7 @@ import Hero from "./components/Hero";
 import Mega from "./components/Mega";
 import Services from "./components/Services";
 import Skin from "./components/Skin";
-import State from "./components/State";
-import Video from "./components/Video";
-import Whatsapp from "./components/Whatsapp";
+
 
 
 export default function Home() {
@@ -24,7 +22,6 @@ export default function Home() {
     <Blog />  
     <Footer />
     <Mega />
-  
       </div>
   );
 }
