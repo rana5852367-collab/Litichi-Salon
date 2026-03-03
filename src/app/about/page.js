@@ -200,21 +200,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/salon-interior.jpg"
-                  alt="Salon Interior"
-                  width={600}
-                  height={700}
-                  className="object-cover"
-                />
-                <div 
-                  className="absolute inset-0"
-                  style={{
-                    background: `linear-gradient(to top, ${colors.gold}33, transparent)`,
-                  }}
-                />
-              </div>
+             
 
               {/* Decorative Element */}
               <div 
@@ -231,7 +217,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
             >
               <h2 
-                className="text-4xl md:text-5xl font-bold mb-6"
+                className="text-4xl md:text-5xl font-bold mb-6 "
                 style={{ color: colors.text }}
               >
                 Our <span style={{ color: colors.gold }}>Story</span>

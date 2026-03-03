@@ -50,7 +50,9 @@ export default function Hero() {
           className="mt-8 flex flex-col sm:flex-row gap-4 md:justify-start justify-center"
         >
           <button className="bg-[#C9A14A] text-[#2A2A2A] px-8 py-3 rounded-full font-semibold hover:bg-[#D6B983] transition duration-300 shadow-lg hover:shadow-[#C9A14A]/40">
-            Book Appointment
+            <a href="/bookopointment" className="block w-full h-full">
+              Book Appointment
+            </a>
           </button>
 
           <button className="border border-[#C9A14A] text-[#C9A14A] px-8 py-3 rounded-full font-semibold hover:bg-[#C9A14A] hover:text-[#2A2A2A] transition duration-300">
