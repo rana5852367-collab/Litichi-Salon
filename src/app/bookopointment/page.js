@@ -34,12 +34,47 @@ export default function BookAppointment() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  // ✅ WhatsApp Send Function
+  const handleSubmit = () => {
+    // Basic validation
+    if (
+      !form.name ||
+      !form.phone ||
+      !form.service ||
+      !form.doctor ||
+      !form.date ||
+      !form.time
+    ) {
+      alert("Please fill all fields");
+      return;
+    }
+
+    const message = `
+Hello, I want to confirm my appointment.
+
+Name: ${form.name}
+Phone: ${form.phone}
+Service: ${selectedService?.title}
+Expert: ${form.doctor}
+Date: ${form.date}
+Time: ${form.time}
+
+Please confirm my booking. Thank you!
+`;
+
+    const whatsappNumber = "923458075375"; // 🔴 Replace with your WhatsApp number (Pakistan format without +)
+
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.open(url, "_blank");
+  };
+
   return (
     <>
-      
       <Header />
 
-      {/* Booking Section */}
       <div
         className="min-h-screen py-20 px-6 text-black mt-5"
         style={{ backgroundColor: colors.background }}
@@ -63,7 +98,6 @@ export default function BookAppointment() {
 
           <div className="space-y-6">
 
-            {/* Name */}
             <input
               name="name"
               placeholder="Full Name"
@@ -72,7 +106,6 @@ export default function BookAppointment() {
               style={{ borderColor: colors.border }}
             />
 
-            {/* Phone */}
             <input
               name="phone"
               placeholder="Phone Number"
@@ -81,7 +114,6 @@ export default function BookAppointment() {
               style={{ borderColor: colors.border }}
             />
 
-            {/* Service */}
             <select
               name="service"
               onChange={handleChange}
@@ -96,7 +128,6 @@ export default function BookAppointment() {
               ))}
             </select>
 
-            {/* Doctor */}
             <select
               name="doctor"
               onChange={handleChange}
@@ -109,7 +140,6 @@ export default function BookAppointment() {
               <option value="Dr. Maria">Dr. Maria</option>
             </select>
 
-            {/* Date & Time */}
             <div className="grid md:grid-cols-2 gap-4">
               <input
                 type="date"
@@ -127,8 +157,8 @@ export default function BookAppointment() {
               />
             </div>
 
-            {/* Button */}
             <button
+              onClick={handleSubmit}
               className="w-full py-4 rounded-full font-bold text-lg transition-all duration-300"
               style={{
                 backgroundColor: colors.gold,
@@ -141,14 +171,13 @@ export default function BookAppointment() {
                 (e.currentTarget.style.backgroundColor = colors.gold)
               }
             >
-              Pay 15% & Confirm
+              Confirm via WhatsApp
             </button>
 
           </div>
         </div>
       </div>
 
-      {/* Footer */}
       <Footer />
     </>
   );

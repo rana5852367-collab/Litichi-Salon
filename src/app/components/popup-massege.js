@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Gift, Sparkles, Phone, Calendar, ArrowRight } from "lucide-react";
 
-export default function Welcome()    {
+export default function Welcome() {
   const [showPopup, setShowPopup] = useState(false);
 
   const colors = {
@@ -461,7 +461,7 @@ export default function Welcome()    {
                       e.currentTarget.style.boxShadow = `0 4px 6px rgba(201, 161, 74, 0.3)`;
                     }}
                   >
-                    Book Your Appointment
+                    <a href="/bookopointment" className="text-white no-underline">Book Now</a>
                     <ArrowRight size={20} />
                   </button>
 

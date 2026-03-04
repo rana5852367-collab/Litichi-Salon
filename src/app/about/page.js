@@ -143,7 +143,7 @@ export default function AboutPage() {
                 color: colors.background,
               }}
             >
-              Book Your Appointment
+          <a href="/bookopointment" className="text-background no-underline">Book Your Appointment </a>
             </motion.button>
           </motion.div>
         </div>
@@ -465,7 +465,7 @@ export default function AboutPage() {
                 color: colors.background,
               }}
             >
-              Book Your Appointment Now
+              <a href="/bookopointment" className="text-background no-underline">Book Your Appointment now</a>
             </motion.button>
           </motion.div>
         </div>
