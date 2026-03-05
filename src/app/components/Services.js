@@ -266,7 +266,7 @@ export default function ServicesShowcase() {
               e.currentTarget.style.color = colors.gold;
             }}
           >
-            View All Services
+            <a href="/services" className="text-white no-underline">View All Services</a>
           </motion.button>
         </motion.div>
       </div>
