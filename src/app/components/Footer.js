@@ -19,11 +19,7 @@ export default function Footer() {
   };
 
   const services = [
-    { name: "Hair Styling", link: "/services/hair" },
-    { name: "Facial", link: "/services/facial" },
-    { name: "Makeup", link: "/services/makeup" },
-    { name: "Manicure", link: "/services/manicure" },
-    { name: "Pedicure", link: "/services/pedicure" },
+   
   ];
 
   const quickLinks = [
@@ -119,48 +115,7 @@ export default function Footer() {
         </motion.div>
 
         {/* Services */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true }}
-        >
-          <h3 
-            className="text-xl font-bold mb-6 flex items-center gap-2"
-            style={{ color: colors.text }}
-          >
-            <span 
-              className="w-1 h-6 rounded-full"
-              style={{ backgroundColor: colors.gold }}
-            />
-            Our Services
-          </h3>
-
-          <ul className="space-y-3">
-            {services.map((service, index) => (
-              <li key={index}>
-                <Link
-                  href={service.link}
-                  className="flex items-center gap-2 transition-all duration-300 group"
-                  style={{ color: colors.textMuted }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.color = colors.gold;
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.color = colors.textMuted;
-                  }}
-                >
-                  <span 
-                    className="w-1.5 h-1.5 rounded-full transition-all duration-300 group-hover:w-3"
-                    style={{ backgroundColor: colors.gold }}
-                  />
-                  {service.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-
+   
         {/* Quick Links */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -169,7 +124,7 @@ export default function Footer() {
           viewport={{ once: true }}
         >
           <h3 
-            className="text-xl font-bold mb-6 flex items-center gap-2"
+            className="text-xl font-bold mb-6 flex items-center gap-2 "
             style={{ color: colors.text }}
           >
             <span 
@@ -212,7 +167,7 @@ export default function Footer() {
           viewport={{ once: true }}
         >
           <h3 
-            className="text-xl font-bold mb-6 flex items-center gap-2"
+            className="text-xl font-bold mb-6 flex items-center gap-3"
             style={{ color: colors.text }}
           >
             <span 

@@ -210,71 +210,73 @@ export default function AboutPage() {
             </motion.div>
 
             {/* Content */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 
-                className="text-4xl md:text-5xl font-bold mb-6 "
-                style={{ color: colors.text }}
-              >
-                Our <span style={{ color: colors.gold }}>Story</span>
-              </h2>
+          <motion.div
+  initial={{ opacity: 0, x: 50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+  className="text-center"
+>
+  <h2
+    className="text-4xl md:text-5xl font-bold mb-6"
+    style={{ color: colors.text }}
+  >
+    Our <span style={{ color: colors.gold }}>Story</span>
+  </h2>
 
-              <p 
-                className="text-lg leading-relaxed mb-4"
-                style={{ color: colors.textMuted }}
-              >
-                Founded in 2014, Litchi Beauty Salon started as a small dream in the heart 
-                of Bahawalnagar. Our founder, Sarah Ahmed, envisioned a place where every 
-                woman could feel pampered, confident, and beautiful.
-              </p>
+  <p
+    className="text-lg leading-relaxed mb-4"
+    style={{ color: colors.textMuted }}
+  >
+    Founded in 2014, Litchi Beauty Salon started as a small dream in the heart
+    of Bahawalnagar. Our founder, Sarah Ahmed, envisioned a place where every
+    woman could feel pampered, confident, and beautiful.
+  </p>
 
-              <p 
-                className="text-lg leading-relaxed mb-4"
-                style={{ color: colors.textMuted }}
-              >
-                What began with just three team members has now grown into a premier beauty 
-                destination with over 10,000 satisfied clients. We've expanded our services, 
-                opened an academy, and won numerous awards.
-              </p>
+  <p
+    className="text-lg leading-relaxed mb-4"
+    style={{ color: colors.textMuted }}
+  >
+    What began with just three team members has now grown into a premier beauty
+    destination with over 10,000 satisfied clients. We've expanded our services,
+    opened an academy, and won numerous awards.
+  </p>
 
-              <p 
-                className="text-lg leading-relaxed mb-8"
-                style={{ color: colors.textMuted }}
-              >
-                But through it all, our commitment remains unchanged: to provide exceptional 
-                beauty services with genuine care and professionalism.
-              </p>
+  <p
+    className="text-lg leading-relaxed mb-8"
+    style={{ color: colors.textMuted }}
+  >
+    But through it all, our commitment remains unchanged: to provide exceptional
+    beauty services with genuine care and professionalism.
+  </p>
 
-              <div 
-                className="flex items-center gap-4 p-6 rounded-xl"
-                style={{ backgroundColor: colors.lightBeige }}
-              >
-                <div 
-                  className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold"
-                  style={{ 
-                    backgroundColor: colors.gold,
-                    color: colors.background,
-                  }}
-                >
-                  10+
-                </div>
-                <div>
-                  <h4 
-                    className="font-bold text-lg mb-1"
-                    style={{ color: colors.text }}
-                  >
-                    Years of Excellence
-                  </h4>
-                  <p style={{ color: colors.textMuted }}>
-                    Serving beauty and confidence since 2014
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+  <div
+    className="flex items-center justify-center gap-4 p-6 rounded-xl mx-auto max-w-md"
+    style={{ backgroundColor: colors.lightBeige }}
+  >
+    <div
+      className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold"
+      style={{
+        backgroundColor: colors.gold,
+        color: colors.background,
+      }}
+    >
+      10+
+    </div>
+
+    <div className="text-left">
+      <h4
+        className="font-bold text-lg mb-1"
+        style={{ color: colors.text }}
+      >
+        Years of Excellence
+      </h4>
+      <p style={{ color: colors.textMuted }}>
+        Serving beauty and confidence since 2014
+      </p>
+    </div>
+  </div>
+</motion.div>
           </div>
         </div>
       </section>
